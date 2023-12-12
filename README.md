@@ -20,9 +20,9 @@
 <br><br/>
 <br><br/>
 <p float="right">
-  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/3d990440-c843-413e-b177-74ae304a29c2" width="300" height ="300" />
-  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/60a908f2-fc05-4c86-8077-31390a42f80e" width="300" height ="300" /> 
-  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/040c5c2d-4d33-49e5-a409-f2d25359cc82" width="300" height ="300" /> 
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/3d990440-c843-413e-b177-74ae304a29c2" width="333" height ="300" />
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/60a908f2-fc05-4c86-8077-31390a42f80e" width="333" height ="300" /> 
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/040c5c2d-4d33-49e5-a409-f2d25359cc82" width="333" height ="300" /> 
 </p>
 <h5> Figure 1, 2, 3: Image of rubber rabbitbrush, native to the Intermountain region. Outline of the Intermountain region from a map point of view. Heatmap that displays temperature increases throughout the globe across 50+ years. </h5>
 <br><br/>
@@ -33,7 +33,7 @@
 <p float="right">
 <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/27e749ff-bff3-4f60-961d-031080dc3a75" width="300" height ="300" />
 <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/7c9ca7c9-0fbe-410a-b836-fb4fac9d9be1" width="300" height ="300" />
-<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/947fb5e2-5ec4-4c19-b5b8-7425bf0355e6" width="300" height ="300" />
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/947fb5e2-5ec4-4c19-b5b8-7425bf0355e6" width="400" height ="300" />
 <h5> Figure 4, 5, 6: Machine used for photographing phenological images. A sample specimen corresponding to the format of the images we download. An overview of a typical digitized specimen photograph and the different parts of the digital image </h5>
 </p>
 <br><br/>
@@ -45,9 +45,9 @@
 ### Data
 
   * Type: 
-    * Main: *occurences.csv* An excel file that has the available phenological truth values for all the available specimens. These also include other values like the specimen
-    * *multimedia.csv* This excel file contains all of our image URIs (URLs) 
-    * *measurementOrFact.csv*
+    * Main: *occurences.csv*:   An excel file that has the available phenological truth values for all the available specimens. These also include other values like the specimen
+    * *multimedia.csv*:   Contains all of our image URIs (URLs) 
+    * *measurementOrFact.csv*:   Has more specimen entries along with some truth values. However, substantially far less than *occurences.csv*.
 
   * Size: Total: ~ 10GB
   * Instances: ~ 13,000 specimens (in main excel file)
@@ -93,9 +93,9 @@
 
 * Packages: 
 
-    * Include the regular "stack": NumPy, Matplotlib, Pandas, Sklearn.
+    * Include the regular "stack": NumPy, Matplotlib, Pandas, Sklearn, Tensorflow, etc.
     
-    * Gower: Package that provides us with the *Gower Distance*: A distance measure that can be used to calculate distance between two entity whose attributes have a mixed of categorical and numerical values. 
+    * Misc: os, random
 
 
 ### Findings/Conclusions
@@ -106,12 +106,10 @@
 
 ### Future Objectives
 
-* Once final result is plotted after performing PCA, attempt to understand specifically why clusters are in certain areas. In future contributions, the investigation of how different metrics affect the clustering could be investigated in greater detail.
+* -
 
-* Attempt to formulate problem and define it more efficiently earlier on. Think about the preprocessing so there is less time taken during cleaning. Another note is to consider the libraries and computations I will have to generate, so the work is done at a more readily pace.
-
-* Try other clustering algorithms that may be more computationally viable or attempt full scope of project using entire dataset with more computational tools. Agglomerative clustering doesn't work as well the higher the dataset and complexity are. Other algorithms may be more efficient with given RAM.
-
+* -
+* -
 ## How to reproduce
  
  * Import neccessary packages:
