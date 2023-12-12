@@ -15,21 +15,42 @@
 
 ## Background and Prior Research
 
-* &nbsp;&nbsp;&nbsp;&nbsp;Phenology, the study of periodic life cycle events in organisms, illustrates how environmental factors impact an organism's life over time. This field also sheds light on how changes in these events can affect ecology, underscoring the importance of understanding and quantifying the interplay between phenological shifts and ecological balance, including impacts on population dynamics and nutrient exchanges (Forrest et al. 2010). The connection between environmental changes, particularly climate change, and plant phenology has been extensively documented. <br><br/>
- &nbsp;&nbsp;&nbsp;&nbsp;For instance, record spring temperatures in the eastern United States during 2010 and 2012, peaking at 11.0°C and 10.7°C, led to significantly earlier flowering in some plant species (Ellwood et al. 2013). Similarly, a comprehensive analysis of 542 plant species across 21 European countries from 1971 to 2000 revealed a consistent trend of earlier phenological events (Menzel et al. 2006). Moreover, a recent study in the eastern United States, examining over 100 years of data on 36 plant species, found that plants flowered approximately 2.26 days earlier for each 1°C rise in annual average temperature, with no significant difference in response between native and non-native species (Geissler et al. 2023). This growing body of research underscores the profound impact of climate change on plant phenology and its broader ecological implications.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phenology, the study of periodic life cycle events in organisms, illustrates how environmental factors impact an organism's life over time. This field also sheds light on how changes in these events can affect ecology, underscoring the importance of understanding and quantifying the interplay between phenological shifts and ecological balance, including impacts on population dynamics and nutrient exchanges (Forrest et al. 2010). The connection between environmental changes, particularly climate change, and plant phenology has been extensively documented. <br><br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For instance, record spring temperatures in the eastern United States during 2010 and 2012, peaking at 11.0°C and 10.7°C, led to significantly earlier flowering in some plant species (Ellwood et al. 2013). Similarly, a comprehensive analysis of 542 plant species across 21 European countries from 1971 to 2000 revealed a consistent trend of earlier phenological events (Menzel et al. 2006). Moreover, a recent study in the eastern United States, examining over 100 years of data on 36 plant species, found that plants flowered approximately 2.26 days earlier for each 1°C rise in annual average temperature, with no significant difference in response between native and non-native species (Geissler et al. 2023). This growing body of research underscores the profound impact of climate change on plant phenology and its broader ecological implications.
 <br><br/>
- * &nbsp;&nbsp;&nbsp;&nbsp; These type of studies give us insights that heavily rely on herbariums, especially in phenology. Herbariums, usually have records of characteristics of the individual plant such as young flower buds, senescing leaves, and bare branches along with meta-data about the information obtained. They're usually found inside online databases hosted by the Herbarium. However, a pertinent issue is that online herbarium specimens usually need phenological classification in the digitization process, which is resource and time intensive (Ellwood et al. 2019) but are crucial for understanding climate change’s impacts on phenological shifts. <br><br/>
- &nbsp;&nbsp;&nbsp;&nbsp;An effective digitization process involves specimen curation, image capture, image processing, electronic data capture and georeferencing locality descriptions. Since not every institution is taking a standardized approach, problems with the quality of our digitization emerge down the road (Nelson et al. 2012) and although insufficient funds at the local, national, and international scale to match the available workload have led to successful efforts to utilize public participation (Ellwood et al. 2018) there is still room for improvement in the domain of digitized specimen annotation. 
-
-
+<br><br/>
+<p float="right">
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/3d990440-c843-413e-b177-74ae304a29c2" width="300" height ="300" />
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/60a908f2-fc05-4c86-8077-31390a42f80e" width="300" height ="300" /> 
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/040c5c2d-4d33-49e5-a409-f2d25359cc82" width="300" height ="300" /> 
+</p>
+<h5> Figure 1, 2, 3: Image of rubber rabbitbrush, native to the Intermountain region. Outline of the Intermountain region from a map point of view. Heatmap that displays temperature increases throughout the globe across 50+ years. </h5>
+<br><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These type of studies give us insights that heavily rely on herbariums, especially in phenology. Herbariums, usually have records of characteristics of the individual plant such as young flower buds, senescing leaves, and bare branches along with meta-data about the information obtained. They're usually found inside online databases hosted by the Herbarium. However, a pertinent issue is that online herbarium specimens usually need phenological classification in the digitization process, which is resource and time intensive (Ellwood et al. 2019) but are crucial for understanding climate change’s impacts on phenological shifts. <br><br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An effective digitization process involves specimen curation, image capture, image processing, electronic data capture and georeferencing locality descriptions. Since not every institution is taking a standardized approach, problems with the quality of our digitization emerge down the road (Nelson et al. 2012) and although insufficient funds at the local, national, and international scale to match the available workload have led to successful efforts to utilize public participation (Ellwood et al. 2018) there is still room for improvement in the domain of digitized specimen annotation. 
+<br><br/>
+<br><br/>
+<p float="right">
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/27e749ff-bff3-4f60-961d-031080dc3a75" width="300" height ="300" />
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/7c9ca7c9-0fbe-410a-b836-fb4fac9d9be1" width="300" height ="300" />
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/947fb5e2-5ec4-4c19-b5b8-7425bf0355e6" width="300" height ="300" />
+<h5> Figure 4, 5, 6: Machine used for photographing phenological images. A sample specimen corresponding to the format of the images we download. An overview of a typical digitized specimen photograph and the different parts of the digital image </h5>
+</p>
+<br><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Our target, rubber rabbitbrush, is valuable to provide research insights precisely for these reasons. Our objectives for our work are to use online labeled herbarium images, expand upon that data using transfer learning methodologies and the error associated with them, allowing us to perform statistical analysis.  
+<br><br/>  
+  
 ## Summary 
 
 ### Data
 
   * Type: 
-    *
-  * Size: 
-  * Instances: 
+    * Main: *occurences.csv* An excel file that has the available phenological truth values for all the available specimens. These also include other values like the specimen
+    * *multimedia.csv* This excel file contains all of our image URIs (URLs) 
+    * *measurementOrFact.csv*
+
+  * Size: Total: ~ 10GB
+  * Instances: ~ 13,000 specimens (in main excel file)
 
 #### Preprocessing / Clean up
 *  
