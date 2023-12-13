@@ -20,9 +20,9 @@
 <br><br/>
 <br><br/>
 <p float="right">
-  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/3d990440-c843-413e-b177-74ae304a29c2" width="333" height ="300" />
-  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/60a908f2-fc05-4c86-8077-31390a42f80e" width="333" height ="300" /> 
-  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/040c5c2d-4d33-49e5-a409-f2d25359cc82" width="333" height ="300" /> 
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/3d990440-c843-413e-b177-74ae304a29c2" width="300" height ="300" />
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/60a908f2-fc05-4c86-8077-31390a42f80e" width="300" height ="300" /> 
+  <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/040c5c2d-4d33-49e5-a409-f2d25359cc82" width="300" height ="300" /> 
 </p>
 <h5> Figure 1, 2, 3: Image of rubber rabbitbrush, native to the Intermountain region. Outline of the Intermountain region from a map point of view. Heatmap that displays temperature increases throughout the globe across 50+ years. </h5>
 <br><br/>
@@ -33,7 +33,7 @@
 <p float="right">
 <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/27e749ff-bff3-4f60-961d-031080dc3a75" width="300" height ="300" />
 <img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/7c9ca7c9-0fbe-410a-b836-fb4fac9d9be1" width="300" height ="300" />
-<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/947fb5e2-5ec4-4c19-b5b8-7425bf0355e6" width="400" height ="300" />
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/947fb5e2-5ec4-4c19-b5b8-7425bf0355e6" width="375" height ="300" />
 <h5> Figure 4, 5, 6: Machine used for photographing phenological images. A sample specimen corresponding to the format of the images we download. An overview of a typical digitized specimen photograph and the different parts of the digital image </h5>
 </p>
 <br><br/>
@@ -45,48 +45,43 @@
 ### Data
 
   * Type: 
-    * Main: *occurences.csv*:   An excel file that has the available phenological truth values for all the available specimens. These also include other values like the specimen
-    * *multimedia.csv*:   Contains all of our image URIs (URLs) 
-    * *measurementOrFact.csv*:   Has more specimen entries along with some truth values. However, substantially far less than *occurences.csv*.
+    * Main: *occurences.csv*:   An excel file that has the available phenological truth values for all the available specimens. These also include other values like the specimen's data of retrieval, the location the specimen was found, the conditions of the habitat near the specimen, the altitude of the location and other various meta-data.
+    * *multimedia.csv*:   Contains all of our image URIs (URLs) for every about ~9000 specimens. This denotes our available images that correspond to a specimen.
+    * *measurementOrFact.csv*:  Has more specimen entries along with some truth values. However, substantially far less than *occurences.csv*.
 
   * Size: Total: ~ 10GB
-  * Instances: ~ 13,000 specimens (in main excel file)
+  * Instances: 13,888 specimens (*occurences.csv*), 2,394 specimens (*measurementOrFact.csv*), 8,920 images (*multimedia.csv*)
 
 #### Preprocessing / Clean up
-*  
+*  The preprocessing of this data is the task that has and will take the majority of our efforts. Herbarium samples that are posted online are notorious for their lack of standarization and don't have a streamlined annotation across all herbariums. As a result when downloading these files, we can immediately tell there will be significant cleaning involved.
+<br><br/>
+<br><br/>
+<p float="right">
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/ba61ffd7-cbea-4fc4-b7ee-cb4008923815" width="500" height ="285" />
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/0d65437b-2dfe-4475-9085-11bb89db0a42" width="500" height ="285" />
+<h5> Figure 7, 8: A jupyter notebook cell with python code displaying the excel file as a dataframe object. </h5>
+</p>
+<br><br/>
 
-*  
+*  We manipulated the data further to ensure we could get all of our categories onto one of the four classes. This involved more dataframe manipulation along with some other code.
+<br><br/>
+<br><br/>
+<p float="right">
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/4d55de39-d386-4b4b-a5ae-164ce795d558" width="500" height ="285" />
+<img src="https://github.com/JBAguinaga/DATA-4381_Capstone/assets/98781538/a81ddcbb-78fc-4ca9-a6b8-d96793fc9fd8" width="500" height ="285" />
+<h5> Figure 8, 9: More jupyter notebook cells with python code for further transformations. Note how we have substantially less images than when we previously started. We'll elaborate on this more later on </h5>
+</p>
+<br><br/>
 
-*  
-
-*  
-
-#### Data Visualization
-  
-    
-
-* Figure 1: 
-  
-    
-
-* Figure 2: 
-   
-  
-    
+* Ultimately the images themselves have not been completely cleaned, as there is still more alterations to be made. The actual truth values for each image has been complete and gives us an idea of what the size of the data we're working with.
+<br><br/>
 ### Problem Formulation
 
-  * Input: 
-  * Output: 
+  * Input: *Ericameria nauseosa* specimen images.
+  * Output: Classification label on whether the specimen is Flowering, Not flowering, blossoming or seeding.
   
   * Model(s): 
-    * *Clustering*: 
-    
-    * Metric: **  : 
-      
-        
-  
-  
-  
+    * *Convolutional Neural Network*: VGG16 architecture with pre-trained weights as our initial model. However more models to be incorporated later on.
   
   
 ### Software Used  
@@ -98,50 +93,48 @@
     * Misc: os, random
 
 
-### Findings/Conclusions
+### Findings/Challenges/Conclusions
 
-* 
+* Our findings were an initial concern of mine that I had wanted to validate. We did not have enough training data to properly generate truth values on unlabeled data. Although later research shows that the issue is not entirely solvable, it is still beneficial to incorporate transfer learning as a strategy to increase our data availability. 
   
-*. 
+* From our cleaning so far, we see that large discrepencacies between the amount of samples in each class or one class having substantially more samples than the rest makes our dataset effectively "unbalanced". Although a model can be trained on and yield high accuracy on unbalanced data, the results can be misleading. We plan on incorporating different methods to mitigate this issue later in the future.
 
 ### Future Objectives
 
-* -
-
-* -
-* -
+- Import the appropriate models: We will compare and contrast 3 different models to ensure select one with good performance. Since our initial goal was to generate a pseudo truth value to the unlabeled image data, we would like the best performance possible for our model of choice.  
+  
+- Error Analysis: To make sure our generated truth values are appropriate for further analysis, we have to have a quantitative measure that corresponds to the error in our model, along with the certainty we have in different images. To do this, we need to perform error analysis, which we'll expand upon further at a later date.
+  
+- Fine tuning vs Our method: Since our plan was to have the pre-trained models only have their last layer changed, we can also experiment with training earlier parts of the models and see how or if that improves performance on our data.
+ 
+- Further goals: Other goals that won't be discussed at this time are the remaining data collection, incorporation of other data cleaning software and the selection of our type of analysis we plan on conducting after all cleaning has been achieved in the second semester of this year-long capstone.
+     
 ## How to reproduce
  
- * Import neccessary packages:
+ * Import initial neccessary packages:
    ```
    import numpy as np
    import pandas as pd
+   import matplotlib
    import sklearn
    ```
 
- * Download dataset from hyperlink below. The problem is better approached via Google Colaboratory, so all code is tailored for usage on that particular platform. However, the general approach could also be done on another platform such as Kaggle.
+ * Download dataset from hyperlink below. In order to download images themselves, please refer to the R-script that was translated into Python code.
  
- * Use general code provided. However, be aware that file paths will be different depending on where dataset is initially loaded onto Google Colaboratory.
+ * Use general code provided. However, be aware that file paths will be different depending on where dataset is initially loaded.
 
 ### Files in repository
 
 * *image_preprocessing.ipynb*: 
-  * Walks through the data collection, preliminary exploratory analysis of the image data, cleaning, organizing and formatting of the relevant image data.
+  * Walks through the data collection, preliminary exploratory analysis of the image data, cleaning, organizing and formatting of the relevant image data along with some of the tabular data in our excel files.
 
-* *Encoding_and_Visualization.ipynb*: 
-  * Notebook that provides code for one-hot encoding along with multiple visualizations/plotting of attributes to help build intuition.
-
-### Software Setup
-
-*
+* *model_development.ipynb*: 
+  * Notebook that provides the initial importing of the model. Ultimately, did not actually run the pre-trained model on training data and the notebook still needs more work done to complete.
 
 
 ### Data
 
-* Download link: 
-
-* *.csv* 
-
+* Download link: https://intermountainbiota.org/portal/collections/harvestparams.php
 
 ## Citations
 
