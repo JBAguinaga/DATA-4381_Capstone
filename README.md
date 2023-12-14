@@ -136,7 +136,7 @@
 
 ### Data
 
-* Download link: https://intermountainbiota.org/portal/collections/harvestparams.php
+* Herbarium website link: https://intermountainbiota.org/portal/collections/harvestparams.php
 
 ## Citations
 
