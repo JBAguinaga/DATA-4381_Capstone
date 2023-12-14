@@ -132,7 +132,7 @@
   * Notebook that provides the initial importing of the model. Ultimately, did not actually run the pre-trained model on training data and the notebook still needs more work done to complete.
 
 * *DATA-4381_presentation.pptx*: 
-  * A presentation that was built to show my milestones throughout to my course professors and other students throughout the semester.
+  * A presentation that was built to show my milestones during my work to my course professors and other students throughout the semester.
 
 ### Data
 
